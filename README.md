@@ -1,17 +1,10 @@
 # LongReadDeNovoAssembly_BINP29
 
-# install
-## file tree
-```bash
-mkdir Data/ Data/Raw_reads Results/ Results/01_fastqc/
-```
-## git
+## Version control(git)
+
 ```bash
 git clone https://github.com/resabut/LongReadDeNovoAssembly_BINP29.git
 ```
- 
-
-
 .gitignore
 
     /Data
@@ -19,15 +12,22 @@ git clone https://github.com/resabut/LongReadDeNovoAssembly_BINP29.git
     busco_2646102.log
     busco_downloads/
 
+# Installation and set-up
+
 ## Download data
 [Reads](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR13577846&display=download) 
 Download the fastqc and unzip it
 ```bash
-gunzip Data/Raw_reads/SRR13577846.fastq.gz
+gunzip Data/Raw_reads/SRR13577846.fastqc.gz
 ```
+It is a dataset containing HiFi Pacbio reads from the yeast *Saccharomyces cerevisiae*, strain CEN.PK.
 
-It is a dataset containing HiFi Pacbio reads from the yeast *Saccharomyces cerevisiae*
 
+The [reference sequence](https://www.ncbi.nlm.nih.gov/genome/15?genome_assembly_id=22535) is taken for the strain S288C.
+Down the reference genome and the annotation.
+```bash
+gunzip Data/Reference/GCF_000146045.2_R64_genomic.gff.gz
+```
 
 to make read-only the data directory
 ```bash
@@ -84,13 +84,15 @@ canu \
  maxThreads=10 \
  -pacbio-hifi Data/Raw_reads/SRR13577846.fastq
 ```
-From the Results/yeast/asm.report file
-
+From the Results/02_yeast/asm.report file
+```bash
+cat Results/02_yeast/asm.report | less
+```
     --   Found 117521 reads.
     --   Found 1103859512 bases (91.22 times coverage).
 From here we see that the coverage was over 90x
 
-From the Results/yeast/asm.report file
+From the Results/02_yeast/asm.report file
 
     [UNITIGGING/CONTIGS]
     -- Found, in version 1, after unitig construction:
@@ -155,6 +157,57 @@ In the context of PacBio genome assembly, Canu generates two types of output: co
 mkdir Results/03_Quast
 quast Results/02_yeast/asm.contigs.fasta -o Results/03_Quast
 ```
+![img/quast_report_v1.png](img/quast_report_v1.png)
+
+Run Quast with reference genome and annotation
+```bash
+quast Results/02_yeast/asm.contigs.fasta \
+  -r Data/Reference/GCF_000146045.2_R64_genomic.fna.gz \  # reference genome
+  -g Data/Reference/GCF_000146045.2_R64_genomic.gff \  # reference annotation
+  -o Results/03_Quast/Reference
+```
+Here is the report:
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+    Assembly                     asm.contigs     
+    # contigs (>= 0 bp)          96              
+    # contigs (>= 1000 bp)       96              
+    # contigs (>= 5000 bp)       96              
+    # contigs (>= 10000 bp)      85              
+    # contigs (>= 25000 bp)      18              
+    # contigs (>= 50000 bp)      17              
+    Total length (>= 0 bp)       13150776        
+    Total length (>= 1000 bp)    13150776        
+    Total length (>= 5000 bp)    13150776        
+    Total length (>= 10000 bp)   13047603        
+    Total length (>= 25000 bp)   12111163        
+    Total length (>= 50000 bp)   12083485        
+    # contigs                    96              
+    Largest contig               1506339         
+    Total length                 13150776        
+    Reference length             12157105        
+    GC (%)                       37.83           
+    Reference GC (%)             38.15           
+    N50                          778969          
+    NG50                         808829          
+    N90                          274012          
+    NG90                         437058          
+    auN                          792651.6        
+    auNG                         857439.7        
+    L50                          7               
+    LG50                         6               
+    L90                          16              
+    LG90                         14              
+    # misassemblies              108             
+    # misassembled contigs       37              
+    Misassembled contigs length  12398790        
+    # local misassemblies        319             
+    # scaffold gap ext. mis.     0               
+    # scaffold gap loc. mis.     0               
+    # unaligned mis. contigs     0               
+    # unaligned contigs          6 + 21 part   
+
+We can extract the N50, NG50, total length, the number of missassemblies.
 
 ## 4. BUSCO
 ```bash
@@ -163,6 +216,18 @@ mkdir Results/04_Busco
 busco -i Results/02_yeast/asm.contigs.fasta \
   -o canu \
   --out_path Results/04_Busco \
-  -l saccharomycetes_odb10 \ # appropriate dataset for Saccharomyces
+  -l saccharomycetes_odb10 \  # appropriate dataset for Saccharomyces
   -m genome
 ```
+
+Here is an extract of the BUSCO report
+
+    ***** Results: *****
+    
+        C:99.7%[S:96.2%,D:3.5%],F:0.1%,M:0.2%,n:2137	   
+        2129	Complete BUSCOs (C)			   
+        2055	Complete and single-copy BUSCOs (S)	   
+        74	Complete and duplicated BUSCOs (D)	   
+        2	Fragmented BUSCOs (F)			   
+        6	Missing BUSCOs (M)			   
+        2137	Total BUSCO groups searched
