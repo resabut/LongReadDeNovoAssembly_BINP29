@@ -16,6 +16,9 @@ git clone https://github.com/resabut/LongReadDeNovoAssembly_BINP29.git
 
     /Data
     /Results
+    busco_2646102.log
+    busco_downloads/
+
 ## Download data
 [Reads](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR13577846&display=download) 
 Download the fastqc and unzip it
@@ -36,14 +39,19 @@ chmod a=r Data/
 ```bash
 conda create -n longread
 conda activate longread
-conda install fastqc=0.11.* quast=5.2.* busco=5.4.* multiqc=1.14 canu=2.2
+conda install fastqc=0.11.* quast=5.2.* multiqc=1.14 canu=2.2
 ```
 
+## conda env for busco
+```bash
+conda create -n longread_busco busco=5.4.5
+```
+A new environment has to be created
 I will use canu for the assembly
 
 
 # MAIN PART
-## fastqc
+## 1. FASTQC
 ```bash
 fastqc Data/Raw_reads -o Results/01_fastqc/
 ```
@@ -60,7 +68,7 @@ There are very few long reads, which determines the composition of the ends of t
 ![img/sequence_length_distribution.png](img/sequence_length_distribution.png)
 
 
-## canu
+## 2. CANU
 
 [Canu](https://canu.readthedocs.io/en/latest/quick-start.html) has a 3-step approach to long-read genome assembly.
 * Correction: improves the accuracy of the bases.
@@ -70,7 +78,7 @@ There are very few long reads, which determines the composition of the ends of t
 ### First run
 ```bash
 canu \
- -p asm -d Results/yeast \
+ -p asm -d Results/02_yeast \
  genomeSize=12.1m \
  -raw \
  maxThreads=10 \
@@ -142,4 +150,19 @@ In the context of PacBio genome assembly, Canu generates two types of output: co
     versions of those same regions. While both contigs and consensus sequences can be useful for downstream analyses, 
     consensus sequences are generally considered to be more accurate and reliable than contigs.
 
-So the
+## 3. QUAST
+```bash
+mkdir Results/03_Quast
+quast Results/02_yeast/asm.contigs.fasta -o Results/03_Quast
+```
+
+## 4. BUSCO
+```bash
+conda activate longread_busco # NOTE: busco required packages conflict with the rest
+mkdir Results/04_Busco
+busco -i Results/02_yeast/asm.contigs.fasta \
+  -o canu \
+  --out_path Results/04_Busco \
+  -l saccharomycetes_odb10 \ # appropriate dataset for Saccharomyces
+  -m genome
+```
