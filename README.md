@@ -1,6 +1,59 @@
-# LongReadDeNovoAssembly_BINP29
+# *de novo* long-read assembly with canu
 
-## Version control(git)
+<!-- TOC -->
+* [Installation and set-up](#installation-and-set-up)
+  * [Download data](#download-data)
+  * [Protect Data directory](#protect-data-directory)
+  * [Conda](#conda)
+  * [Version control (git)](#version-control--git-)
+* [Steps](#steps)
+  * [1. FASTQC - Read quality control](#1-fastqc---read-quality-control)
+  * [2. CANU - Genome assembly](#2-canu---genome-assembly)
+  * [3. QUAST - Genome assembly quality control](#3-quast---genome-assembly-quality-control)
+  * [4. BUSCO](#4-busco)
+* [Conclusions](#conclusions)
+<!-- TOC -->
+
+# Installation and set-up
+
+## Download data
+### Reads
+[Reads](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR13577846&display=download) 
+Download the fastqc and unzip it
+```bash
+gunzip Data/Raw_reads/SRR13577846.fastqc.gz
+```
+It is a dataset containing HiFi Pacbio reads from the yeast *Saccharomyces cerevisiae*, strain CEN.PK.
+
+### Reference
+The [reference sequence](https://www.ncbi.nlm.nih.gov/genome/15?genome_assembly_id=22535) is taken for the strain S288C.
+Down the reference genome and the annotation.
+```bash
+gunzip Data/Reference/GCF_000146045.2_R64_genomic.gff.gz
+```
+## Protect Data directory
+To make read-only the data directory
+```bash
+chmod a=r Data/
+```
+
+## Conda
+### 1st conda environment
+This environment contains most of the packages used for this analysis
+```bash
+conda create -n longread \ 
+  fastqc=0.11.* \  # read quality control
+  quast=5.2.* \  # assembly quality check
+  canu=2.2 # genome assembler for long reads
+```
+Canu is the option because it is a fast and accurate assembler that is [recommended by PacBio](https://www.pacb.com/products-and-services/analytical-software/whole-genome-sequencing/).
+
+### 2nd conda environment
+BUSCO required packages conflict with the others, so a different environment is required.
+```bash
+conda create -n longread_busco busco=5.4.5
+```
+## Version control (git)
 
 ```bash
 git clone https://github.com/resabut/LongReadDeNovoAssembly_BINP29.git
@@ -12,46 +65,8 @@ git clone https://github.com/resabut/LongReadDeNovoAssembly_BINP29.git
     busco_2646102.log
     busco_downloads/
 
-# Installation and set-up
-
-## Download data
-[Reads](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR13577846&display=download) 
-Download the fastqc and unzip it
-```bash
-gunzip Data/Raw_reads/SRR13577846.fastqc.gz
-```
-It is a dataset containing HiFi Pacbio reads from the yeast *Saccharomyces cerevisiae*, strain CEN.PK.
-
-
-The [reference sequence](https://www.ncbi.nlm.nih.gov/genome/15?genome_assembly_id=22535) is taken for the strain S288C.
-Down the reference genome and the annotation.
-```bash
-gunzip Data/Reference/GCF_000146045.2_R64_genomic.gff.gz
-```
-
-to make read-only the data directory
-```bash
-chmod a=r Data/
-```
-
-# conda env
-# conda env general
-```bash
-conda create -n longread
-conda activate longread
-conda install fastqc=0.11.* quast=5.2.* multiqc=1.14 canu=2.2
-```
-
-## conda env for busco
-```bash
-conda create -n longread_busco busco=5.4.5
-```
-A new environment has to be created
-I will use canu for the assembly
-
-
-# MAIN PART
-## 1. FASTQC
+# Steps
+## 1. FASTQC - Read quality control
 ```bash
 fastqc Data/Raw_reads -o Results/01_fastqc/
 ```
@@ -68,21 +83,24 @@ There are very few long reads, which determines the composition of the ends of t
 ![img/sequence_length_distribution.png](img/sequence_length_distribution.png)
 
 
-## 2. CANU
+## 2. CANU - Genome assembly
 
 [Canu](https://canu.readthedocs.io/en/latest/quick-start.html) has a 3-step approach to long-read genome assembly.
 * Correction: improves the accuracy of the bases.
 * Trimming: eliminates low-quality parts of the sequences.
-* Assembly: constructs the contigs, generates the consensus sequences and creates graphs of alternate paths.
+* Assembly: constructs the contigs, generates the consensus sequences and creates graphs of alternate paths.  
 
+However, since the reads are HiFi, canu assumes that correction and trimming have been applied previously. 
+This makes sense given the FASTQC report.
 ### First run
 ```bash
 canu \
- -p asm -d Results/02_yeast \
- genomeSize=12.1m \
- -raw \
+ -p asm -d Results/02_yeast \  # directory for results
+ genomeSize=12.1m \  # estimated/expected genome size
+ -raw \  # raw reads
  maxThreads=10 \
- -pacbio-hifi Data/Raw_reads/SRR13577846.fastq
+ -pacbio-hifi \  # HiFI PacBio reads - canu skips correction and trimming 
+ Data/Raw_reads/SRR13577846.fastq # read data
 ```
 From the Results/02_yeast/asm.report file
 ```bash
@@ -90,9 +108,8 @@ cat Results/02_yeast/asm.report | less
 ```
     --   Found 117521 reads.
     --   Found 1103859512 bases (91.22 times coverage).
-From here we see that the coverage was over 90x
-
-From the Results/02_yeast/asm.report file
+From here we see that the coverage was over 90x.  
+Further, from the Results/02_yeast/asm.report file
 
     [UNITIGGING/CONTIGS]
     -- Found, in version 1, after unitig construction:
@@ -152,14 +169,16 @@ In the context of PacBio genome assembly, Canu generates two types of output: co
     versions of those same regions. While both contigs and consensus sequences can be useful for downstream analyses, 
     consensus sequences are generally considered to be more accurate and reliable than contigs.
 
-## 3. QUAST
+## 3. QUAST - Genome assembly quality control
+Quast allows for calculating some quality statistics from an assembly.
 ```bash
 mkdir Results/03_Quast
-quast Results/02_yeast/asm.contigs.fasta -o Results/03_Quast
+quast Results/02_yeast/asm.contigs.fasta \  # assembly path
+  -o Results/03_Quast # output directory
 ```
 ![img/quast_report_v1.png](img/quast_report_v1.png)
 
-Run Quast with reference genome and annotation
+Quast also allows for reference data as input so that it can estimate missassembly occurrences.
 ```bash
 quast Results/02_yeast/asm.contigs.fasta \
   -r Data/Reference/GCF_000146045.2_R64_genomic.fna.gz \  # reference genome
@@ -167,7 +186,6 @@ quast Results/02_yeast/asm.contigs.fasta \
   -o Results/03_Quast/Reference
 ```
 Here is the report:
-All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
 
     Assembly                     asm.contigs     
     # contigs (>= 0 bp)          96              
@@ -210,17 +228,19 @@ All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e
 We can extract the N50, NG50, total length, the number of missassemblies.
 
 ## 4. BUSCO
+BUSCO also provides information about the quality of the assembly by looking for conserved genes expected in a given lineage.
+In this case, the most specific dataset that we can pick is the one containg the conserved genes for the Saccharomycetes class, to which *Saccharomyces cerevisiae* belongs to.
 ```bash
 conda activate longread_busco # NOTE: busco required packages conflict with the rest
 mkdir Results/04_Busco
 busco -i Results/02_yeast/asm.contigs.fasta \
-  -o canu \
-  --out_path Results/04_Busco \
-  -l saccharomycetes_odb10 \  # appropriate dataset for Saccharomyces
-  -m genome
+  -o canu \  # output prefixes
+  --out_path Results/04_Busco \  # output path directory 
+  -l saccharomycetes_odb10 \  # lineage dataset for Saccharomyces
+  -m genome  # mode, genome assembly
 ```
 
-Here is an extract of the BUSCO report
+Here is an extract of the BUSCO report:
 
     ***** Results: *****
     
@@ -231,3 +251,8 @@ Here is an extract of the BUSCO report
         2	Fragmented BUSCOs (F)			   
         6	Missing BUSCOs (M)			   
         2137	Total BUSCO groups searched
+
+
+# Conclusions
+![conclusions.png](img/conclusions.png)
+
