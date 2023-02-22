@@ -32,6 +32,7 @@ chmod a=r Data/
 ```
 
 # conda env
+# conda env general
 ```bash
 conda create -n longread
 conda activate longread
@@ -75,3 +76,70 @@ canu \
  maxThreads=10 \
  -pacbio-hifi Data/Raw_reads/SRR13577846.fastq
 ```
+From the Results/yeast/asm.report file
+
+    --   Found 117521 reads.
+    --   Found 1103859512 bases (91.22 times coverage).
+From here we see that the coverage was over 90x
+
+From the Results/yeast/asm.report file
+
+    [UNITIGGING/CONTIGS]
+    -- Found, in version 1, after unitig construction:
+    --   contigs:      58 sequences, total length 8910468 bp (including 54 repeats of total length 465278 bp).
+    --   bubbles:      38 sequences, total length 377304 bp.
+    --   unassembled:  7681 sequences, total length 51147127 bp.
+    --
+    -- Contig sizes based on genome size 12.1mbp:
+    --
+    --            NG (bp)  LG (contigs)    sum (bp)
+    --         ----------  ------------  ----------
+    --     10      796598             2     1860130
+    --     20      769110             3     2629240
+    --     30      646077             5     3947801
+    --     40      552670             7     5071711
+    --     50      481798             9     6082428
+    --     60      399788            12     7324771
+    --     70      158927            17     8548060
+    --
+
+    [UNITIGGING/CONSENSUS]
+    -- Found, in version 2, after consensus generation:
+    --   contigs:      58 sequences, total length 12618858 bp (including 54 repeats of total length 679715 bp).
+    --   bubbles:      38 sequences, total length 531918 bp.
+    --   unassembled:  7681 sequences, total length 72735645 bp.
+    --
+    -- Contig sizes based on genome size 12.1mbp:
+    --
+    --            NG (bp)  LG (contigs)    sum (bp)
+    --         ----------  ------------  ----------
+    --     10     1506339             1     1506339
+    --     20     1126163             2     2632502
+    --     30     1088934             3     3721436
+    --     40      914946             5     5588753
+    --     50      808829             6     6397582
+    --     60      745377             8     7921928
+    --     70      681590             9     8603518
+    --     80      579998            11     9793730
+    --     90      437058            14    11235933
+    --    100       27678            18    12111163
+    --
+
+The difference between the contig and consensus sequences, according to ChatGPT is:
+In the context of PacBio genome assembly, Canu generates two types of output: contigs and consensus sequences. Here's the difference between them:
+
+    Contigs: A contig is a contiguous stretch of DNA sequence that is assembled from the reads. Canu generates contigs 
+    by assembling the long PacBio reads into overlapping pieces and then merging them into longer sequences. Contigs are
+    represented as individual sequences, each representing a unique genomic region.
+
+    Consensus sequences: A consensus sequence is a single, high-quality DNA sequence that represents the most probable 
+    sequence of a genomic region. Canu generates consensus sequences by polishing the contigs. This process involves 
+    refining the consensus sequence by correcting any errors in the assembly, filling in gaps, and resolving ambiguities.
+    The final consensus sequence represents a more accurate representation of the underlying genomic region.
+
+    In summary, the primary difference between Canu contigs and consensus sequences is that contigs are individual 
+    genomic regions that have been assembled from the reads, while consensus sequences are high-quality, error-corrected
+    versions of those same regions. While both contigs and consensus sequences can be useful for downstream analyses, 
+    consensus sequences are generally considered to be more accurate and reliable than contigs.
+
+So the
