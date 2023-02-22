@@ -35,7 +35,7 @@ chmod a=r Data/
 ```bash
 conda create -n longread
 conda activate longread
-conda install fastqc=0.11.* quast=5.2.* busco=5.4.* multiqc=1.14 canu=
+conda install fastqc=0.11.* quast=5.2.* busco=5.4.* multiqc=1.14 canu=2.2
 ```
 
 I will use canu for the assembly
@@ -47,7 +47,31 @@ I will use canu for the assembly
 fastqc Data/Raw_reads -o Results/01_fastqc/
 ```
 The quality of the reads is very good, but we run into some problems. 
-The GC content doesn't fit the expected distribution. Also, when we look at the gc content per base, it is unequal at both ends.
-
+The GC content doesn't fit the expected distribution. 
 ![img/GC_content.png](img/GC_content.png)
+Also, when we look at the gc content per base, it is unequal at both ends.
+
 ![img/per_base_seq_content.png](img/per_base_seq_content.png)
+
+Some of these could be due to the heterogeneous length of the reads. 
+There are very few long reads, which determines the composition of the ends of the reads in the previous part of the read.
+
+![img/sequence_length_distribution.png](img/sequence_length_distribution.png)
+
+
+## canu
+
+[Canu](https://canu.readthedocs.io/en/latest/quick-start.html) has a 3-step approach to long-read genome assembly.
+* Correction: improves the accuracy of the bases.
+* Trimming: eliminates low-quality parts of the sequences.
+* Assembly: constructs the contigs, generates the consensus sequences and creates graphs of alternate paths.
+
+### First run
+```bash
+canu \
+ -p asm -d Results/yeast \
+ genomeSize=12.1m \
+ -raw \
+ maxThreads=10 \
+ -pacbio-hifi Data/Raw_reads/SRR13577846.fastq
+```
