@@ -60,15 +60,22 @@ git clone https://github.com/resabut/LongReadDeNovoAssembly_BINP29.git
 ```
 .gitignore
 
-    /Data
-    /Results
-    busco_2646102.log
-    busco_downloads/
-
+    Data/Raw_reads/SRR*
+### git-lfs
+For large files (above 100MB), we need to manage them with lfs.
+This can be done by adding them to the .gitattribute file and initialising git:
+```bash
+git lfs install
+```
+In case we commited said files previously, we can modify the history as following:
+```bash
+git lfs migrate import --above=99MB
+```
 # Steps
 ## 1. FASTQC - Read quality control
 ```bash
-fastqc Data/Raw_reads -o Results/01_fastqc/
+mkdir Results/ Results/01_fastqc
+fastqc Data/Raw_reads/SRR* -o Results/01_fastqc/
 ```
 The quality of the reads is very good, but we run into some problems. 
 The GC content doesn't fit the expected distribution. 
@@ -94,6 +101,7 @@ However, since the reads are HiFi, canu assumes that correction and trimming hav
 This makes sense given the FASTQC report.
 ### First run
 ```bash
+mkdir Results/02_yeast
 canu \
  -p asm -d Results/02_yeast \  # directory for results
  genomeSize=12.1m \  # estimated/expected genome size
@@ -251,6 +259,8 @@ Here is an extract of the BUSCO report:
         2	Fragmented BUSCOs (F)			   
         6	Missing BUSCOs (M)			   
         2137	Total BUSCO groups searched
+
+
 
 
 # Conclusions
