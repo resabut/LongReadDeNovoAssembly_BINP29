@@ -1,0 +1,16 @@
+#                                                                                 --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name             accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#     ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+tig00000001:100245-101102 -            286 24643at4891          -            223  7.5e-123  405.8   5.0   1   2      0.13   1.8e+02   -1.0   0.1     1    15    13    27    13    35 0.84 -
+tig00000001:100245-101102 -            286 24643at4891          -            223  7.5e-123  405.8   5.0   2   2  5.5e-126  7.5e-123  405.8   5.0    10   223    42   281    32   281 0.93 -
+tig00000004:1936-2436     -            167 24643at4891          -            223   4.3e-59  197.3   4.6   1   1   1.8e-61   2.5e-58  194.8   4.6    10   126    26   167    18   167 0.90 -
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /home/inf-38-2022/BINP29/longread/2/busco_downloads/lineages/saccharomycetes_odb10/hmms/24643at4891.hmm
+# Target file:     /home/inf-38-2022/BINP29/longread/2/Results/04_Busco/canu/run_saccharomycetes_odb10/metaeuk_output/initial_results/asm.contigs.fasta.modified.fas
+# Option settings: hmmsearch --domtblout /home/inf-38-2022/BINP29/longread/2/Results/04_Busco/canu/run_saccharomycetes_odb10/hmmer_output/initial_run_results/24643at4891.out --cpu 1 /home/inf-38-2022/BINP29/longread/2/busco_downloads/lineages/saccharomycetes_odb10/hmms/24643at4891.hmm /home/inf-38-2022/BINP29/longread/2/Results/04_Busco/canu/run_saccharomycetes_odb10/metaeuk_output/initial_results/asm.contigs.fasta.modified.fas 
+# Current dir:     /home/inf-38-2022/BINP29/longread/2
+# Date:            Thu Feb 23 14:07:03 2023
+# [ok]

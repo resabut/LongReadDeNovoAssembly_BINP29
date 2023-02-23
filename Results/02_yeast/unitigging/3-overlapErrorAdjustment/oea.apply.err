@@ -1,0 +1,20 @@
+
+Scanning.
+  './00001.oea' covers reads       1-31999   with    5341742 overlaps.
+  './00002.oea' covers reads   32000-63896   with    5346160 overlaps.
+  './00003.oea' covers reads   63897-95802   with    5298673 overlaps.
+  './00004.oea' covers reads   95803-117521  with    3629767 overlaps.
+Discontinuity between files './00001.oea' and './00002.oea'.
+Discontinuity between files './00002.oea' and './00003.oea'.
+Discontinuity between files './00003.oea' and './00004.oea'.
+
+Merging.
+  './00001.oea' covers reads       1-31999  ;    5341742 with overlaps.
+  './00002.oea' covers reads   32000-63896  ;    5346160 with overlaps.
+  './00003.oea' covers reads   63897-95802  ;    5298673 with overlaps.
+  './00004.oea' covers reads   95803-117521 ;    3629767 with overlaps.
+
+Renaming.
+
+Success!
+

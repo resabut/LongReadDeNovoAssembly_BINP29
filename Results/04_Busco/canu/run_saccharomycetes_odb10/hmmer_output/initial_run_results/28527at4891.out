@@ -1,0 +1,17 @@
+#                                                                                 --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name             accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#     ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+tig00000010:331451-333067 -            539 28527at4891          -            292   2.2e-75  250.9  35.3   1   4   3.5e-08   9.6e-05   19.0   0.2     2    36     1    36     1    46 0.88 -
+tig00000010:331451-333067 -            539 28527at4891          -            292   2.2e-75  250.9  35.3   2   4   4.8e-57   1.3e-53  179.4  23.6    34   231   152   397   138   407 0.78 -
+tig00000010:331451-333067 -            539 28527at4891          -            292   2.2e-75  250.9  35.3   3   4   2.9e-06    0.0079   12.7   0.0   233   263   422   453   413   460 0.85 -
+tig00000010:331451-333067 -            539 28527at4891          -            292   2.2e-75  250.9  35.3   4   4   1.5e-10   4.2e-07   26.8   0.1   261   292   487   524   457   524 0.80 -
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /home/inf-38-2022/BINP29/longread/2/busco_downloads/lineages/saccharomycetes_odb10/hmms/28527at4891.hmm
+# Target file:     /home/inf-38-2022/BINP29/longread/2/Results/04_Busco/canu/run_saccharomycetes_odb10/metaeuk_output/initial_results/asm.contigs.fasta.modified.fas
+# Option settings: hmmsearch --domtblout /home/inf-38-2022/BINP29/longread/2/Results/04_Busco/canu/run_saccharomycetes_odb10/hmmer_output/initial_run_results/28527at4891.out --cpu 1 /home/inf-38-2022/BINP29/longread/2/busco_downloads/lineages/saccharomycetes_odb10/hmms/28527at4891.hmm /home/inf-38-2022/BINP29/longread/2/Results/04_Busco/canu/run_saccharomycetes_odb10/metaeuk_output/initial_results/asm.contigs.fasta.modified.fas 
+# Current dir:     /home/inf-38-2022/BINP29/longread/2
+# Date:            Thu Feb 23 14:07:21 2023
+# [ok]

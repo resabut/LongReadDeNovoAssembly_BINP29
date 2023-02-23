@@ -1,0 +1,31 @@
+
+Found perl:
+   /home/inf-38-2022/anaconda3/envs/longread/bin/perl
+   This is perl 5, version 32, subversion 1 (v5.32.1) built for x86_64-linux-thread-multi
+
+Found java:
+   /home/inf-38-2022/anaconda3/envs/longread/lib/jvm/bin/java
+   openjdk version "17.0.3-internal" 2022-04-19
+
+Found canu:
+   /home/inf-38-2022/anaconda3/envs/longread/bin/canu
+   canu 2.2
+
+Running job 1 based on command line options.
+
+Attempting to increase maximum allowed processes and open files.
+  Max processes per user limited to 8207656, no increase possible.
+  Max open files limited to 80000, no increase possible.
+
+
+Opened '../asm.seqStore' with 117521 reads.
+
+Constructing slice 1 for store './asm.ovlStore.BUILDING'.
+ - Filtering overlaps over 1.0000 fraction error.
+
+Bucketizing input    1 out of    5 - '1-overlapper/001/000001.ovb'
+Bucketizing input    2 out of    5 - '1-overlapper/001/000003.ovb'
+Bucketizing input    3 out of    5 - '1-overlapper/001/000005.ovb'
+Bucketizing input    4 out of    5 - '1-overlapper/001/000007.ovb'
+Bucketizing input    5 out of    5 - '1-overlapper/001/000009.ovb'
+Success!

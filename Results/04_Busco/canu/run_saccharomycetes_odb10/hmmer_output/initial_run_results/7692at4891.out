@@ -1,0 +1,27 @@
+#                                                                                 --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name             accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#     ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+tig00000061:241680-243992 -            771 7692at4891           -            585    2e-235  780.1  25.2   1   3     0.055        22    0.7   0.0     2    19    28    45    27    51 0.88 -
+tig00000061:241680-243992 -            771 7692at4891           -            585    2e-235  780.1  25.2   2   3  5.1e-224    2e-221  733.9  20.1     6   498    61   593    58   682 0.91 -
+tig00000061:241680-243992 -            771 7692at4891           -            585    2e-235  780.1  25.2   3   3   1.3e-15   5.2e-13   45.7   0.3   516   577   680   741   641   747 0.83 -
+tig00000078:77878-79446   -            523 7692at4891           -            585     0.002   14.1   0.0   1   2     0.011       4.3    3.1   0.0   520   575   117   176   104   179 0.78 -
+tig00000078:77878-79446   -            523 7692at4891           -            585     0.002   14.1   0.0   2   2   0.00011     0.043    9.6   0.1   518   578   178   239   163   245 0.80 -
+tig00000039:219933-221492 -            520 7692at4891           -            585     0.002   14.1   0.1   1   2    0.0058       2.3    4.0   0.0   515   576   108   174    71   179 0.79 -
+tig00000039:219933-221492 -            520 7692at4891           -            585     0.002   14.1   0.1   2   2   0.00034      0.13    8.0   0.1   520   579   177   237   173   242 0.85 -
+tig00000039:4739-6298     -            520 7692at4891           -            585    0.0038   13.1   0.1   1   2     0.015       5.7    2.6   0.0   520   576   114   174    72   178 0.78 -
+tig00000039:4739-6298     -            520 7692at4891           -            585    0.0038   13.1   0.1   2   2   4.2e-05     0.016   11.0   0.1   502   579   157   237   128   242 0.81 -
+tig00000055:8676-10235    -            520 7692at4891           -            585    0.0038   13.1   0.1   1   2     0.015       5.7    2.6   0.0   520   576   114   174    72   178 0.78 -
+tig00000055:8676-10235    -            520 7692at4891           -            585    0.0038   13.1   0.1   2   2   4.2e-05     0.016   11.0   0.1   502   579   157   237   128   242 0.81 -
+tig00000031:7335-8894     -            520 7692at4891           -            585    0.0045   12.9   0.1   1   2     0.016       6.1    2.5   0.0   520   576   114   174    74   183 0.78 -
+tig00000031:7335-8894     -            520 7692at4891           -            585    0.0045   12.9   0.1   2   2   4.1e-05     0.016   11.1   0.1   501   579   156   237   128   242 0.82 -
+tig00000010:7000-8445     -            482 7692at4891           -            585     0.013   11.4   0.1   1   1   7.9e-05     0.031   10.1   0.1   518   579   137   199    89   204 0.71 -
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /home/inf-38-2022/BINP29/longread/2/busco_downloads/lineages/saccharomycetes_odb10/hmms/7692at4891.hmm
+# Target file:     /home/inf-38-2022/BINP29/longread/2/Results/04_Busco/canu/run_saccharomycetes_odb10/metaeuk_output/initial_results/asm.contigs.fasta.modified.fas
+# Option settings: hmmsearch --domtblout /home/inf-38-2022/BINP29/longread/2/Results/04_Busco/canu/run_saccharomycetes_odb10/hmmer_output/initial_run_results/7692at4891.out --cpu 1 /home/inf-38-2022/BINP29/longread/2/busco_downloads/lineages/saccharomycetes_odb10/hmms/7692at4891.hmm /home/inf-38-2022/BINP29/longread/2/Results/04_Busco/canu/run_saccharomycetes_odb10/metaeuk_output/initial_results/asm.contigs.fasta.modified.fas 
+# Current dir:     /home/inf-38-2022/BINP29/longread/2
+# Date:            Thu Feb 23 14:08:33 2023
+# [ok]

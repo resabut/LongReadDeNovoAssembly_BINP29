@@ -1,0 +1,166 @@
+
+Found perl:
+   /home/inf-38-2022/anaconda3/envs/longread/bin/perl
+   This is perl 5, version 32, subversion 1 (v5.32.1) built for x86_64-linux-thread-multi
+
+Found java:
+   /home/inf-38-2022/anaconda3/envs/longread/lib/jvm/bin/java
+   openjdk version "17.0.3-internal" 2022-04-19
+
+Found canu:
+   /home/inf-38-2022/anaconda3/envs/longread/bin/canu
+   canu 2.2
+
+Running job 2 based on command line options.
+Initializing.
+Opening seqStore '../../asm.seqStore'.
+Correcting reads 32000 to 63896.
+  Ignoring alignment errors in simple sequence repeats (-s supplied).
+Reading 252046 corrections from './red.red'.
+Correcting 211858180 bases with 127751 indel adjustments.
+--Allocate 202 + 0 + 0 MB for bases, adjusts and reads.
+Corrected 211803882 bases with 1646 substitutions, 22785 deletions and 10131 insertions.
+Loading overlaps.
+Read_Olaps()--  Loading 5346160 overlaps from '../asm.ovlStore' for reads 32000 to 63896
+--Allocate 163 MB for overlaps.
+Read_Olaps()--  Loaded 5346160 overlaps -- 2673016 normal and 2673144 innie.
+Sorting overlaps.
+Recomputing overlaps.
+--Allocate 8 MB for fseq and rseq.
+--Allocate 32 MB for fadj and radj.
+--Allocate 16 MB for pedWorkArea_t.
+-- Allocate 0 MB for Edit_Array pointers.
+Recomputing overlaps -         1 -         1 -    117521
+--Allocate 16 MB for edit array work space 0 (positions 0-4092)
+Recomputing overlaps -         1 -      1025 -    117521
+Recomputing overlaps -         1 -      2049 -    117521
+Recomputing overlaps -         1 -      3073 -    117521
+Recomputing overlaps -         1 -      4097 -    117521
+Recomputing overlaps -         1 -      5121 -    117521
+Recomputing overlaps -         1 -      6145 -    117521
+Recomputing overlaps -         1 -      7169 -    117521
+Recomputing overlaps -         1 -      8193 -    117521
+Recomputing overlaps -         1 -      9217 -    117521
+Recomputing overlaps -         1 -     10241 -    117521
+Recomputing overlaps -         1 -     11265 -    117521
+Recomputing overlaps -         1 -     12289 -    117521
+Recomputing overlaps -         1 -     13313 -    117521
+Recomputing overlaps -         1 -     14337 -    117521
+Recomputing overlaps -         1 -     15361 -    117521
+Recomputing overlaps -         1 -     16385 -    117521
+Recomputing overlaps -         1 -     17409 -    117521
+Recomputing overlaps -         1 -     18433 -    117521
+Recomputing overlaps -         1 -     19457 -    117521
+Recomputing overlaps -         1 -     20481 -    117521
+Recomputing overlaps -         1 -     21505 -    117521
+Recomputing overlaps -         1 -     22529 -    117521
+Recomputing overlaps -         1 -     23553 -    117521
+Recomputing overlaps -         1 -     24577 -    117521
+Recomputing overlaps -         1 -     25601 -    117521
+Recomputing overlaps -         1 -     26625 -    117521
+Recomputing overlaps -         1 -     27649 -    117521
+Recomputing overlaps -         1 -     28673 -    117521
+Recomputing overlaps -         1 -     29697 -    117521
+Recomputing overlaps -         1 -     30721 -    117521
+Recomputing overlaps -         1 -     31745 -    117521
+Recomputing overlaps -         1 -     32769 -    117521
+Recomputing overlaps -         1 -     33793 -    117521
+Recomputing overlaps -         1 -     34817 -    117521
+Recomputing overlaps -         1 -     35841 -    117521
+Recomputing overlaps -         1 -     36865 -    117521
+Recomputing overlaps -         1 -     37889 -    117521
+Recomputing overlaps -         1 -     38913 -    117521
+Recomputing overlaps -         1 -     39937 -    117521
+Recomputing overlaps -         1 -     40961 -    117521
+Recomputing overlaps -         1 -     41985 -    117521
+Recomputing overlaps -         1 -     43009 -    117521
+Recomputing overlaps -         1 -     44033 -    117521
+Recomputing overlaps -         1 -     45057 -    117521
+Recomputing overlaps -         1 -     46081 -    117521
+Recomputing overlaps -         1 -     47105 -    117521
+Recomputing overlaps -         1 -     48129 -    117521
+Recomputing overlaps -         1 -     49153 -    117521
+Recomputing overlaps -         1 -     50177 -    117521
+Recomputing overlaps -         1 -     51201 -    117521
+Recomputing overlaps -         1 -     52225 -    117521
+Recomputing overlaps -         1 -     53249 -    117521
+Recomputing overlaps -         1 -     54273 -    117521
+Recomputing overlaps -         1 -     55297 -    117521
+Recomputing overlaps -         1 -     56321 -    117521
+Recomputing overlaps -         1 -     57345 -    117521
+Recomputing overlaps -         1 -     58369 -    117521
+Recomputing overlaps -         1 -     59393 -    117521
+Recomputing overlaps -         1 -     60417 -    117521
+Recomputing overlaps -         1 -     61441 -    117521
+Recomputing overlaps -         1 -     62465 -    117521
+Recomputing overlaps -         1 -     63489 -    117521
+Recomputing overlaps -         1 -     64513 -    117521
+Recomputing overlaps -         1 -     65537 -    117521
+Recomputing overlaps -         1 -     66561 -    117521
+Recomputing overlaps -         1 -     67585 -    117521
+Recomputing overlaps -         1 -     68609 -    117521
+Recomputing overlaps -         1 -     69633 -    117521
+Recomputing overlaps -         1 -     70657 -    117521
+Recomputing overlaps -         1 -     71681 -    117521
+Recomputing overlaps -         1 -     72705 -    117521
+Recomputing overlaps -         1 -     73729 -    117521
+Recomputing overlaps -         1 -     74753 -    117521
+Recomputing overlaps -         1 -     75777 -    117521
+Recomputing overlaps -         1 -     76801 -    117521
+Recomputing overlaps -         1 -     77825 -    117521
+Recomputing overlaps -         1 -     78849 -    117521
+Recomputing overlaps -         1 -     79873 -    117521
+Recomputing overlaps -         1 -     80897 -    117521
+Recomputing overlaps -         1 -     81921 -    117521
+Recomputing overlaps -         1 -     82945 -    117521
+Recomputing overlaps -         1 -     83969 -    117521
+Recomputing overlaps -         1 -     84993 -    117521
+Recomputing overlaps -         1 -     86017 -    117521
+Recomputing overlaps -         1 -     87041 -    117521
+Recomputing overlaps -         1 -     88065 -    117521
+Recomputing overlaps -         1 -     89089 -    117521
+Recomputing overlaps -         1 -     90113 -    117521
+Recomputing overlaps -         1 -     91137 -    117521
+Recomputing overlaps -         1 -     92161 -    117521
+Recomputing overlaps -         1 -     93185 -    117521
+Recomputing overlaps -         1 -     94209 -    117521
+Recomputing overlaps -         1 -     95233 -    117521
+Recomputing overlaps -         1 -     96257 -    117521
+Recomputing overlaps -         1 -     97281 -    117521
+Recomputing overlaps -         1 -     98305 -    117521
+Recomputing overlaps -         1 -     99329 -    117521
+Recomputing overlaps -         1 -    100353 -    117521
+Recomputing overlaps -         1 -    101377 -    117521
+Recomputing overlaps -         1 -    102401 -    117521
+Recomputing overlaps -         1 -    103425 -    117521
+Recomputing overlaps -         1 -    104449 -    117521
+Recomputing overlaps -         1 -    105473 -    117521
+Recomputing overlaps -         1 -    106497 -    117521
+Recomputing overlaps -         1 -    107521 -    117521
+Recomputing overlaps -         1 -    108545 -    117521
+Recomputing overlaps -         1 -    109569 -    117521
+Recomputing overlaps -         1 -    110593 -    117521
+Recomputing overlaps -         1 -    111617 -    117521
+Recomputing overlaps -         1 -    112641 -    117521
+Recomputing overlaps -         1 -    113665 -    117521
+Recomputing overlaps -         1 -    114689 -    117521
+Recomputing overlaps -         1 -    115713 -    117521
+Recomputing overlaps -         1 -    116737 -    117521
+
+--  Release bases, adjusts and reads.
+Olaps Fwd 2673016
+Olaps Rev 2673144
+Total:  5346160
+Failed: 4042 (both)
+Failed: 12251 (either)
+Failed: 12251 (match to end)
+Failed: 4042 (negative length)
+Changed 5333909 overlaps.
+Better: 1822944 overlaps.
+Worse:  182 overlaps.
+Same:   3510783 overlaps.
+Sorting overlaps.
+Saving corrected error rates to file ./00002.oea.WORKING
+--Allocate 10 MB for output error rates.
+
+Bye.

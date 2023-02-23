@@ -1,0 +1,64 @@
+lenSuggestRepeat sum     465278 (genomeSize 12100000)
+lenSuggestRepeat num         54
+lenSuggestRepeat ave       8616
+lenSuggestCircular sum      28872 (genomeSize 12100000)
+lenSuggestCircular num          3
+lenSuggestCircular ave       9624
+lenUnassembled ng10        8381 bp   lg10     142   sum    1216767 bp
+lenUnassembled ng20        8205 bp   lg20     288   sum    2427121 bp
+lenUnassembled ng30        8047 bp   lg30     437   sum    3636510 bp
+lenUnassembled ng40        7918 bp   lg40     588   sum    4842158 bp
+lenUnassembled ng50        7812 bp   lg50     742   sum    6053210 bp
+lenUnassembled ng60        7695 bp   lg60     898   sum    7263083 bp
+lenUnassembled ng70        7592 bp   lg70    1056   sum    8470467 bp
+lenUnassembled ng80        7502 bp   lg80    1217   sum    9685045 bp
+lenUnassembled ng90        7413 bp   lg90    1379   sum   10892988 bp
+lenUnassembled ng100       7337 bp   lg100   1543   sum   12102549 bp
+lenUnassembled ng110       7270 bp   lg110   1709   sum   13315180 bp
+lenUnassembled ng120       7189 bp   lg120   1876   sum   14522433 bp
+lenUnassembled ng130       7121 bp   lg130   2045   sum   15731493 bp
+lenUnassembled ng140       7048 bp   lg140   2216   sum   16942527 bp
+lenUnassembled ng150       6983 bp   lg150   2389   sum   18156257 bp
+lenUnassembled ng160       6926 bp   lg160   2563   sum   19366107 bp
+lenUnassembled ng170       6865 bp   lg170   2738   sum   20572335 bp
+lenUnassembled ng180       6803 bp   lg180   2915   sum   21781643 bp
+lenUnassembled ng190       6747 bp   lg190   3094   sum   22994145 bp
+lenUnassembled ng200       6694 bp   lg200   3274   sum   24203925 bp
+lenUnassembled ng210       6643 bp   lg210   3455   sum   25411079 bp
+lenUnassembled ng220       6584 bp   lg220   3638   sum   26621446 bp
+lenUnassembled ng230       6533 bp   lg230   3823   sum   27834904 bp
+lenUnassembled ng240       6489 bp   lg240   4009   sum   29045559 bp
+lenUnassembled ng250       6445 bp   lg250   4196   sum   30254350 bp
+lenUnassembled ng260       6394 bp   lg260   4384   sum   31461494 bp
+lenUnassembled ng270       6349 bp   lg270   4574   sum   32671773 bp
+lenUnassembled ng280       6303 bp   lg280   4765   sum   33880159 bp
+lenUnassembled ng290       6257 bp   lg290   4958   sum   35092053 bp
+lenUnassembled ng300       6211 bp   lg300   5152   sum   36301240 bp
+lenUnassembled ng310       6169 bp   lg310   5348   sum   37514344 bp
+lenUnassembled ng320       6123 bp   lg320   5545   sum   38725173 bp
+lenUnassembled ng330       6082 bp   lg330   5743   sum   39933802 bp
+lenUnassembled ng340       6040 bp   lg340   5942   sum   41140009 bp
+lenUnassembled ng350       6004 bp   lg350   6143   sum   42350557 bp
+lenUnassembled ng360       5965 bp   lg360   6346   sum   43565367 bp
+lenUnassembled ng370       5925 bp   lg370   6549   sum   44772248 bp
+lenUnassembled ng380       5878 bp   lg380   6754   sum   45981981 bp
+lenUnassembled ng390       5828 bp   lg390   6961   sum   47193596 bp
+lenUnassembled ng400       5771 bp   lg400   7169   sum   48400293 bp
+lenUnassembled ng410       5680 bp   lg410   7381   sum   49615126 bp
+lenUnassembled ng420       5021 bp   lg420   7600   sum   50821473 bp
+lenUnassembled sum   51147127 (genomeSize 12100000)
+lenUnassembled num       7681
+lenUnassembled ave       6658
+lenBubble sum     377304 (genomeSize 12100000)
+lenBubble num         38
+lenBubble ave       9929
+lenContig ng10      796598 bp   lg10       2   sum    1860130 bp
+lenContig ng20      769110 bp   lg20       3   sum    2629240 bp
+lenContig ng30      646077 bp   lg30       5   sum    3947801 bp
+lenContig ng40      552670 bp   lg40       7   sum    5071711 bp
+lenContig ng50      481798 bp   lg50       9   sum    6082428 bp
+lenContig ng60      399788 bp   lg60      12   sum    7324771 bp
+lenContig ng70      158927 bp   lg70      17   sum    8548060 bp
+lenContig sum    8910468 (genomeSize 12100000)
+lenContig num         58
+lenContig ave     153628

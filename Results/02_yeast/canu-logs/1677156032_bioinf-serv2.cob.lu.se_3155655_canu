@@ -1,0 +1,13 @@
+
+###
+###  Reading options from '/home/inf-38-2022/anaconda3/envs/longread/bin/canu.defaults'
+###
+
+# Add site specific options (for setting up Grid or limiting memory/threads) here.
+
+###
+###  Reading options from the command line.
+###
+
+genomeSize=12.1m
+maxThreads=100

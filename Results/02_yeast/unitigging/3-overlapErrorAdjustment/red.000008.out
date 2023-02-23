@@ -1,0 +1,34 @@
+
+Found perl:
+   /home/inf-38-2022/anaconda3/envs/longread/bin/perl
+   This is perl 5, version 32, subversion 1 (v5.32.1) built for x86_64-linux-thread-multi
+
+Found java:
+   /home/inf-38-2022/anaconda3/envs/longread/lib/jvm/bin/java
+   openjdk version "17.0.3-internal" 2022-04-19
+
+Found canu:
+   /home/inf-38-2022/anaconda3/envs/longread/bin/canu
+   canu 2.2
+
+Running job 8 based on command line options.
+Read_Frags()-- Loading target reads 81112 through 92699 with 76862722 bases.
+Read_Frags()-- 2.362 GB for bases, votes and info.
+
+Read_Olaps()-- Loading 1917605 overlaps.
+Read_Olaps()-- 0.029 GB for overlaps..
+
+extractReads()-- Loading reads 1 to 83590 (80932 reads with 536873409 bases) overlaps 0 through 1365850.
+extractReads()-- Loaded.
+processReads()-- Launching compute.
+extractReads()-- Loading reads 83591 to 117521 (32857 reads with 217757673 bases) overlaps 1365850 through 1917605.
+extractReads()-- Loaded.
+processReads()-- Waiting for compute.
+processReads()-- Launching compute.
+processReads()-- Waiting for compute.
+
+Passed overlaps =    1823134  95.0735%
+Failed overlaps =      94471   4.9265%
+Output file: ./00008.red.WORKING
+
+Bye.

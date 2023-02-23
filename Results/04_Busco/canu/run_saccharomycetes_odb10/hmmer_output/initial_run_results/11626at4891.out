@@ -1,0 +1,20 @@
+#                                                                                 --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name             accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#     ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+tig00000038:169058-170524 -            489 11626at4891          -            413  3.7e-225  744.5  21.8   1   1  1.8e-224  1.2e-221  732.9  21.8     1   409    19   485    19   489 0.91 -
+tig00000010:528152-529576 -            475 11626at4891          -            413   1.2e-94  314.6   0.0   1   1     5e-95   3.4e-92  306.5   0.0     1   403    12   475    12   475 0.81 -
+tig00000010:384921-386327 -            469 11626at4891          -            413   5.9e-43  144.3  10.1   1   2     1e-12     7e-10   35.4   0.4     1    57    11    66    11    72 0.91 -
+tig00000010:384921-386327 -            469 11626at4891          -            413   5.9e-43  144.3  10.1   2   2   5.4e-36   3.7e-33  112.1   3.8    97   399   142   464   102   468 0.82 -
+tig00000012:380536-381312 -            259 11626at4891          -            413   4.5e-07   26.2   0.4   1   3      0.45   3.1e+02   -2.9   0.0   207   226    14    33     2    36 0.62 -
+tig00000012:380536-381312 -            259 11626at4891          -            413   4.5e-07   26.2   0.4   2   3      0.24   1.6e+02   -2.0   0.1     3    12    83    92    81   102 0.76 -
+tig00000012:380536-381312 -            259 11626at4891          -            413   4.5e-07   26.2   0.4   3   3   3.7e-09   2.5e-06   23.7   0.0   164   286   118   258   112   259 0.77 -
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /home/inf-38-2022/BINP29/longread/2/busco_downloads/lineages/saccharomycetes_odb10/hmms/11626at4891.hmm
+# Target file:     /home/inf-38-2022/BINP29/longread/2/Results/04_Busco/canu/run_saccharomycetes_odb10/metaeuk_output/initial_results/asm.contigs.fasta.modified.fas
+# Option settings: hmmsearch --domtblout /home/inf-38-2022/BINP29/longread/2/Results/04_Busco/canu/run_saccharomycetes_odb10/hmmer_output/initial_run_results/11626at4891.out --cpu 1 /home/inf-38-2022/BINP29/longread/2/busco_downloads/lineages/saccharomycetes_odb10/hmms/11626at4891.hmm /home/inf-38-2022/BINP29/longread/2/Results/04_Busco/canu/run_saccharomycetes_odb10/metaeuk_output/initial_results/asm.contigs.fasta.modified.fas 
+# Current dir:     /home/inf-38-2022/BINP29/longread/2
+# Date:            Thu Feb 23 14:05:56 2023
+# [ok]

@@ -1,0 +1,56 @@
+
+Found perl:
+   /home/inf-38-2022/anaconda3/envs/longread/bin/perl
+   This is perl 5, version 32, subversion 1 (v5.32.1) built for x86_64-linux-thread-multi
+
+Found java:
+   /home/inf-38-2022/anaconda3/envs/longread/lib/jvm/bin/java
+   openjdk version "17.0.3-internal" 2022-04-19
+
+Found canu:
+   /home/inf-38-2022/anaconda3/envs/longread/bin/canu
+   canu 2.2
+
+Running job 2 based on command line options.
+-- Using seqFile '../asm.ctgStore/partition.0002'.
+-- Opening tigStore '../asm.ctgStore' version 1.
+-- Opening output results file './ctgcns/0002.cns.WORKING'.
+--
+-- Computing consensus for b=0 to e=7798 with errorRate 0.0500 (max 0.4000) and minimum overlap 500
+--
+Loading corrected-trimmed reads from seqFile '../asm.ctgStore/partition.0002'
+Consensus finished successfully.
+
+Bye.
+                           ----------CONTAINED READS----------  -DOVETAIL  READS-
+  tigID    length   reads      used coverage  ignored coverage      used coverage
+------- --------- -------  -------- -------- -------- --------  -------- --------
+      5    796598    9957      2792   24.88x     5607   43.10x      1558   15.12x
+      8     12592       5         1    0.49x        0    0.00x         4    2.14x
+     13     14781      61        51   22.52x        0    0.00x        10    5.46x
+     19     10961       6         2    1.32x        0    0.00x         4    2.62x
+     26     13298       3         0    0.00x        0    0.00x         3    1.51x
+     45     12457      12         4    1.27x        0    0.00x         8    4.12x
+     46     13050      35        24   11.15x        0    0.00x        11    6.10x
+     55      9780     128        49   37.85x       76   50.36x         3    2.41x
+     62      7935      12        11    9.08x        0    0.00x         1    1.00x
+     65     20164     361        70   26.37x      257   81.06x        34   13.86x
+     68      8019      24        23   18.64x        0    0.00x         1    1.00x
+     69     10315     156        43   31.72x      102   64.44x        11    8.92x
+     70     13537      18        11    5.20x        0    0.00x         7    3.89x
+     75     14221      95        68   33.67x       16    6.75x        11    6.57x
+     76     13113     113        62   34.06x       41   19.23x        10    6.06x
+     87      9479     103        49   32.64x       43   25.35x        11    7.96x
+     88      7517      50        49   29.64x        0    0.00x         1    1.00x
+     89      7510      19        18   14.33x        0    0.00x         1    1.00x
+     90      9502     231        49   35.73x      176  107.13x         6    4.86x
+     94      7587      11        10    8.87x        0    0.00x         1    1.00x
+     96     14292     287        71   32.65x      201   76.33x        15    7.77x
+     97      7540      19        17   14.19x        0    0.00x         2    1.95x
+     99     10362      24        18   10.32x        0    0.00x         6    3.98x
+    107     12806       5         1    0.54x        0    0.00x         4    2.42x
+    113      8774       9         5    3.26x        0    0.00x         4    2.83x
+    119     11948       8         4    1.84x        0    0.00x         4    1.99x
+
+Processed 26 tigs and 0 singletons.
+

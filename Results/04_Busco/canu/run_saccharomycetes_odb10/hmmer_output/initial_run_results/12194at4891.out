@@ -1,0 +1,26 @@
+#                                                                                 --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name             accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#     ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+tig00000007:50468-53605   -           1046 12194at4891          -            689  5.9e-204  676.4  71.2   1   2   1.5e-24     1e-21   74.1   0.2     2   122    11   151    10   168 0.78 -
+tig00000007:50468-53605   -           1046 12194at4891          -            689  5.9e-204  676.4  71.2   2   2  2.8e-183  1.9e-180  598.7  65.9    99   689   173   952   160   952 0.80 -
+tig00000031:218921-220834 -            638 12194at4891          -            689   8.3e-08   28.1   5.2   1   4   0.00028      0.19    7.1   0.0   106   188   131   212   121   222 0.82 -
+tig00000031:218921-220834 -            638 12194at4891          -            689   8.3e-08   28.1   5.2   2   4   2.9e-05      0.02   10.3   0.3   109   194   385   470   377   485 0.78 -
+tig00000031:218921-220834 -            638 12194at4891          -            689   8.3e-08   28.1   5.2   3   4     0.098        67   -1.3   0.0   510   531   486   507   479   535 0.79 -
+tig00000031:218921-220834 -            638 12194at4891          -            689   8.3e-08   28.1   5.2   4   4   3.4e-05     0.023   10.1   0.1   239   280   547   588   539   611 0.90 -
+tig00000018:399839-401707 -            623 12194at4891          -            689   3.6e-07   26.0   8.8   1   4    0.0046       3.1    3.1   0.1   101   176   105   179    93   254 0.70 -
+tig00000018:399839-401707 -            623 12194at4891          -            689   3.6e-07   26.0   8.8   2   4    0.0027       1.8    3.8   0.0   430   467   286   323   271   330 0.81 -
+tig00000018:399839-401707 -            623 12194at4891          -            689   3.6e-07   26.0   8.8   3   4   0.00099      0.68    5.3   0.0   453   531   417   499   404   506 0.81 -
+tig00000018:399839-401707 -            623 12194at4891          -            689   3.6e-07   26.0   8.8   4   4     1e-06   0.00068   15.2   0.2   239   283   532   576   523   622 0.83 -
+tig00000014:68519-70735   -            739 12194at4891          -            689   2.1e-06   23.5   8.8   1   3     0.015        10    1.4   0.7   206   283    31   109     3   168 0.77 -
+tig00000014:68519-70735   -            739 12194at4891          -            689   2.1e-06   23.5   8.8   2   3   1.6e-05     0.011   11.2   0.4   237   282   571   616   359   630 0.71 -
+tig00000014:68519-70735   -            739 12194at4891          -            689   2.1e-06   23.5   8.8   3   3   4.4e-05      0.03    9.7   0.0   237   296   639   701   635   729 0.85 -
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /home/inf-38-2022/BINP29/longread/2/busco_downloads/lineages/saccharomycetes_odb10/hmms/12194at4891.hmm
+# Target file:     /home/inf-38-2022/BINP29/longread/2/Results/04_Busco/canu/run_saccharomycetes_odb10/metaeuk_output/initial_results/asm.contigs.fasta.modified.fas
+# Option settings: hmmsearch --domtblout /home/inf-38-2022/BINP29/longread/2/Results/04_Busco/canu/run_saccharomycetes_odb10/hmmer_output/initial_run_results/12194at4891.out --cpu 1 /home/inf-38-2022/BINP29/longread/2/busco_downloads/lineages/saccharomycetes_odb10/hmms/12194at4891.hmm /home/inf-38-2022/BINP29/longread/2/Results/04_Busco/canu/run_saccharomycetes_odb10/metaeuk_output/initial_results/asm.contigs.fasta.modified.fas 
+# Current dir:     /home/inf-38-2022/BINP29/longread/2
+# Date:            Thu Feb 23 14:05:59 2023
+# [ok]

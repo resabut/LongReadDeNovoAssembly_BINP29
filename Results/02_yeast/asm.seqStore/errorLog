@@ -1,0 +1,4 @@
+read 'SRR13577846.26917.1' of length 538 in file '/home/inf-38-2022/BINP29/longread/2/Data/Raw_reads/SRR13577846.fastq' - too short, skipping.
+read 'SRR13577846.57361.1' of length 154 in file '/home/inf-38-2022/BINP29/longread/2/Data/Raw_reads/SRR13577846.fastq' - too short, skipping.
+read 'SRR13577846.63087.1' of length 154 in file '/home/inf-38-2022/BINP29/longread/2/Data/Raw_reads/SRR13577846.fastq' - too short, skipping.
+read 'SRR13577846.110629.1' of length 235 in file '/home/inf-38-2022/BINP29/longread/2/Data/Raw_reads/SRR13577846.fastq' - too short, skipping.

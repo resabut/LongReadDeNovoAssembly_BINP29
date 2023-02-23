@@ -1,4 +1,5 @@
-busco_downloads/
-busco_2646102.log
-Results/
-Data/
+Data/Raw_reads/SRR13577846.fastq
+./Results/02_yeast/asm.seqStore/blobs.0001
+./Results/02_yeast/unitigging/asm.ovlStore/0001-001
+./Results/02_yeast/unitigging/asm.ctgStore/seqDB.v002.dat
+./Data/Raw_reads/SRR13577846.fastq

@@ -1,0 +1,36 @@
+
+Found perl:
+   /home/inf-38-2022/anaconda3/envs/longread/bin/perl
+   This is perl 5, version 32, subversion 1 (v5.32.1) built for x86_64-linux-thread-multi
+
+Found java:
+   /home/inf-38-2022/anaconda3/envs/longread/lib/jvm/bin/java
+   openjdk version "17.0.3-internal" 2022-04-19
+
+Found canu:
+   /home/inf-38-2022/anaconda3/envs/longread/bin/canu
+   canu 2.2
+
+Running job 1 based on command line options.
+
+Attempting to increase maximum allowed processes and open files.
+  Max processes per user limited to 8207656, no increase possible.
+  Max open files limited to 80000, no increase possible.
+
+
+Finding overlaps.
+  found    9315438 overlaps in './asm.ovlStore.BUILDING/bucket0001/sliceSizes'.
+  found    9980373 overlaps in './asm.ovlStore.BUILDING/bucket0002/sliceSizes'.
+
+Loading   19295811 overlaps using 0.43 GB of allowed (-M) 2 GB memory.
+  loading    9315438 overlaps from './asm.ovlStore.BUILDING/bucket0001/slice0001'.
+  loading    9980373 overlaps from './asm.ovlStore.BUILDING/bucket0002/slice0001'.
+
+Sorting.
+
+Writing sorted overlaps.
+  created './asm.ovlStore.BUILDING/0001' with 19295811 overlaps for reads 1 to 115617.
+
+Removing bucketized overlaps.
+
+Success!

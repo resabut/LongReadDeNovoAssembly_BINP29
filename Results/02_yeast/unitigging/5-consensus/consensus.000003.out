@@ -1,0 +1,68 @@
+
+Found perl:
+   /home/inf-38-2022/anaconda3/envs/longread/bin/perl
+   This is perl 5, version 32, subversion 1 (v5.32.1) built for x86_64-linux-thread-multi
+
+Found java:
+   /home/inf-38-2022/anaconda3/envs/longread/lib/jvm/bin/java
+   openjdk version "17.0.3-internal" 2022-04-19
+
+Found canu:
+   /home/inf-38-2022/anaconda3/envs/longread/bin/canu
+   canu 2.2
+
+Running job 3 based on command line options.
+-- Using seqFile '../asm.ctgStore/partition.0003'.
+-- Opening tigStore '../asm.ctgStore' version 1.
+-- Opening output results file './ctgcns/0003.cns.WORKING'.
+--
+-- Computing consensus for b=0 to e=7798 with errorRate 0.0500 (max 0.4000) and minimum overlap 500
+--
+Loading corrected-trimmed reads from seqFile '../asm.ctgStore/partition.0003'
+Consensus finished successfully.
+
+Bye.
+                           ----------CONTAINED READS----------  -DOVETAIL  READS-
+  tigID    length   reads      used coverage  ignored coverage      used coverage
+------- --------- -------  -------- -------- -------- --------  -------- --------
+      3      7700       3         0    0.00x        0    0.00x         3    2.46x
+      4     11784       3         0    0.00x        0    0.00x         3    1.84x
+      6     10045       5         0    0.00x        0    0.00x         5    3.24x
+      7    769110    9757      2698   24.87x     5553   44.19x      1506   15.14x
+      9     12021       3         0    0.00x        0    0.00x         3    1.66x
+     21     13116       4         0    0.00x        0    0.00x         4    2.06x
+     24     13394       4         1    0.44x        0    0.00x         3    1.60x
+     33     11635       4         0    0.00x        0    0.00x         4    2.36x
+     36     10209       3         0    0.00x        0    0.00x         3    1.96x
+     40      9085       3         0    0.00x        0    0.00x         3    2.14x
+     51      8368       4         0    0.00x        0    0.00x         4    3.05x
+     52      9743       3         0    0.00x        0    0.00x         3    1.92x
+     53     11270       4         1    0.54x        0    0.00x         3    1.78x
+     54      9758       3         0    0.00x        0    0.00x         3    1.86x
+     56     11845       3         0    0.00x        0    0.00x         3    1.59x
+     57     11566       3         0    0.00x        0    0.00x         3    1.88x
+     60      8785       2         0    0.00x        0    0.00x         2    1.54x
+     63      8207       3         2    1.47x        0    0.00x         1    1.00x
+     64      8043       7         6    4.90x        0    0.00x         1    1.00x
+     66      7623       2         1    0.83x        0    0.00x         1    1.00x
+     67      7587       8         7    6.24x        0    0.00x         1    1.00x
+     74      7321       2         1    0.84x        0    0.00x         1    1.00x
+     80     11000       2         0    0.00x        0    0.00x         2    1.42x
+     82     12385       4         0    0.00x        0    0.00x         4    2.35x
+     84      8578       2         1    0.89x        0    0.00x         1    1.00x
+     85     10350       3         1    0.68x        0    0.00x         2    1.32x
+     93      7459       7         6    5.57x        0    0.00x         1    1.00x
+     98      6734       2         1    0.91x        0    0.00x         1    1.00x
+    103      7109       3         1    0.94x        0    0.00x         2    1.95x
+    104      9717       5         2    0.90x        0    0.00x         3    2.07x
+    106      7063       2         0    0.00x        0    0.00x         2    1.86x
+    108     10420       4         2    1.25x        0    0.00x         2    1.58x
+    109      9270       5         1    0.71x        0    0.00x         4    3.06x
+    112      7579       2         0    0.00x        0    0.00x         2    1.53x
+    115      9345       5         2    1.25x        0    0.00x         3    2.16x
+    117      7900       4         2    1.60x        0    0.00x         2    1.71x
+    118      6364       2         0    0.00x        0    0.00x         2    1.86x
+    120      7302       2         0    0.00x        0    0.00x         2    1.75x
+
+Processed 38 tigs and 1865 singletons.
+

@@ -1,0 +1,20 @@
+tig     17 read   22060 5' intersects tig      7 read   94077 3' (#1496).
+isFwd 0 is3p 1 isBgn 0 isEnd 1 nr 768226
+tig     27 read   44138 5' intersects tig     17 read   58573 3' (#1056).
+isFwd 1 is3p 1 isBgn 0 isEnd 0 nr 534466
+tig     27 read   96981 5' intersects tig      7 read   94077 3' (#1496).
+isFwd 0 is3p 1 isBgn 0 isEnd 1 nr 768226
+tig     28 read  111646 3' intersects tig     17 read  115378 5' (#1055).
+isFwd 1 is3p 0 isBgn 0 isEnd 0 nr 534394
+tig     32 read     564 3' intersects tig     17 read   49085 3' (#1018).
+isFwd 0 is3p 1 isBgn 0 isEnd 0 nr 528402
+tig     39 read   61359 3' intersects tig     20 read   48719 3' (#3).
+isFwd 0 is3p 1 isBgn 0 isEnd 0 nr 12090
+tig     41 read   81568 5' intersects tig     41 read   28114 5' (#3).
+isFwd 1 is3p 0 isBgn 1 isEnd 0 nr 36
+tig     41 read   18141 3' intersects tig     41 read   21415 3' (#16).
+isFwd 0 is3p 1 isBgn 0 isEnd 0 nr 15285
+tig     44 read   95215 3' intersects tig     44 read   15483 3' (#5).
+isFwd 0 is3p 1 isBgn 0 isEnd 0 nr 16915
+tig     44 read    2443 3' intersects tig     44 read   57117 5' (#12).
+isFwd 0 is3p 0 isBgn 0 isEnd 0 nr 32786

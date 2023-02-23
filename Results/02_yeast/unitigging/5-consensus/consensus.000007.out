@@ -1,0 +1,32 @@
+
+Found perl:
+   /home/inf-38-2022/anaconda3/envs/longread/bin/perl
+   This is perl 5, version 32, subversion 1 (v5.32.1) built for x86_64-linux-thread-multi
+
+Found java:
+   /home/inf-38-2022/anaconda3/envs/longread/lib/jvm/bin/java
+   openjdk version "17.0.3-internal" 2022-04-19
+
+Found canu:
+   /home/inf-38-2022/anaconda3/envs/longread/bin/canu
+   canu 2.2
+
+Running job 7 based on command line options.
+-- Using seqFile '../asm.ctgStore/partition.0007'.
+-- Opening tigStore '../asm.ctgStore' version 1.
+-- Opening output results file './ctgcns/0007.cns.WORKING'.
+--
+-- Computing consensus for b=0 to e=7798 with errorRate 0.0500 (max 0.4000) and minimum overlap 500
+--
+Loading corrected-trimmed reads from seqFile '../asm.ctgStore/partition.0007'
+Consensus finished successfully.
+
+Bye.
+                           ----------CONTAINED READS----------  -DOVETAIL  READS-
+  tigID    length   reads      used coverage  ignored coverage      used coverage
+------- --------- -------  -------- -------- -------- --------  -------- --------
+     18    552670    7115      1940   25.10x     4113   45.79x      1062   14.90x
+     34    311041    3910      1123   25.44x     2199   43.05x       588   14.58x
+
+Processed 2 tigs and 727 singletons.
+

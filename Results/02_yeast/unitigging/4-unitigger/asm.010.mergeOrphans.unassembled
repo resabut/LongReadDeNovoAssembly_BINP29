@@ -1,0 +1,26 @@
+# Contigs flagged as unassembled.
+#
+# fewReadsNumber   2 (singletons always removed and not logged)
+# tooShortLength   0
+# spanFraction     1.000000
+# lowcovFraction   0.500000
+# lowcovDepth      3
+#
+Unitig 4 (normal) unassembled - low coverage (75.77% of unitig at < 3x coverage, allowed 50.00%)
+Unitig 8 (normal) unassembled - low coverage (50.06% of unitig at < 3x coverage, allowed 50.00%)
+Unitig 9 (normal) unassembled - low coverage (84.19% of unitig at < 3x coverage, allowed 50.00%)
+Unitig 11 (normal) unassembled - low coverage (63.33% of unitig at < 3x coverage, allowed 50.00%)
+Unitig 16 (normal) unassembled - low coverage (86.30% of unitig at < 3x coverage, allowed 50.00%)
+Unitig 21 (normal) unassembled - low coverage (51.86% of unitig at < 3x coverage, allowed 50.00%)
+Unitig 24 (normal) unassembled - low coverage (67.81% of unitig at < 3x coverage, allowed 50.00%)
+Unitig 26 (normal) unassembled - low coverage (93.08% of unitig at < 3x coverage, allowed 50.00%)
+Unitig 29 (normal) unassembled - low coverage (70.30% of unitig at < 3x coverage, allowed 50.00%)
+Unitig 30 (normal) unassembled - low coverage (53.83% of unitig at < 3x coverage, allowed 50.00%)
+Unitig 33 (normal) unassembled - low coverage (61.11% of unitig at < 3x coverage, allowed 50.00%)
+Unitig 35 (normal) unassembled - low coverage (75.08% of unitig at < 3x coverage, allowed 50.00%)
+Unitig 36 (normal) unassembled - low coverage (68.66% of unitig at < 3x coverage, allowed 50.00%)
+Unitig 40 (normal) unassembled - low coverage (57.76% of unitig at < 3x coverage, allowed 50.00%)
+Unitig 52 (normal) unassembled - low coverage (68.55% of unitig at < 3x coverage, allowed 50.00%)
+Unitig 53 (normal) unassembled - low coverage (63.31% of unitig at < 3x coverage, allowed 50.00%)
+Unitig 54 (normal) unassembled - low coverage (77.64% of unitig at < 3x coverage, allowed 50.00%)
+Unitig 56 (normal) unassembled - low coverage (90.67% of unitig at < 3x coverage, allowed 50.00%)
